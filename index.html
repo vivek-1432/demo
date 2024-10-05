@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Pharmacy Website</title>
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Font (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- General Styles -->
+    <style>
+       body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #faf8f8;
+            scroll-behavior: smooth;
+            position: relative; /* To position the ::after pseudo-element */
+            min-height: 100vh; /* Ensure body takes up the full viewport height */
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20%; /* Adjust this to change the size of the watermark */
+            height: auto;
+            transform: translate(-50%, -50%); /* Centers the image */
+            background-image: url('photoroom.jpg'); /* Path to your logo image */
+            background-size: contain; /* Ensures the image retains its aspect ratio */
+            background-repeat: no-repeat;
+            opacity: 1.1; /* Faint watermark */
+            z-index: -1; /* Ensure it's behind content */
+            pointer-events: none; /* So it doesn't interfere with interactions */
+        }
+
+        header {
+            background: transparent;
+            padding: 20px 20px; /* Padding around the header */
+            border-bottom: 1px solid #03fd39;
+        }
+
+        .navbar {
+            display: flex; /* Use Flexbox for layout */
+            justify-content: center; /* Center align the content */
+            align-items: center; /* Center vertically */
+        }
+
+        .logo h2 {
+            font-family: 'Poppins', sans-serif; /* Font family */
+            font-size: 28px; /* Font size for the logo */
+            color: rgb(4, 194, 252); /* Text color */
+            margin: 0; /* Remove default margin */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Spacing between letters */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .logo h2:hover {
+            color: #fc0202; /* Change color on hover */
+        }
+
+
+
+       
+
+        .info-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh; /* Full height of the viewport */
+            background: transparent;
+            padding-bottom: 200px;
+        }
+
+        .info-content {
+            background-color: #fff; /* White background for content */
+            max-width: 700px; /* Maximum width of the content */
+            text-align: center; /* Center text alignment */
+            border-bottom: 1px solid #03fd10;
+            border-top: 1px solid #03fd10;
+            padding-bottom: 70px;
+        }
+
+        .info-content h2 {
+            font-size: 28px; /* Heading size */
+            color: #030303; /* Text color */
+            margin-bottom: 20px; /* Space below the heading */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+
+        .info-content p {
+            font-size: 16px; /* Paragraph size */
+            line-height: 1.6; /* Line height for readability */
+            color: #0c0c0c; /* Paragraph color */
+            margin-bottom: 15px; /* Space between paragraphs */
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-weight: 100;
+        }
+
+        
+
+        /* Footer */
+        footer {
+            background-image: linear-gradient(rgb(255, 255, 255), rgb(7, 7, 7));
+            color: #070707;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgb(0, 255, 85);
+        }
+
+        footer h3 {
+            color: #050505;
+            font-size: 24px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        footer .footer-links a {
+            color: #050505;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: #ff0000;
+        }
+
+        footer .social-icons a {
+            color: #ff0303;
+            font-size: 28px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #01bef8;
+        }
+
+        footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #faf8f8;
+        }
+
+        /* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Pharmacy</h2>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section id="info" class="info-section">
+            <div class="info-content">
+                <h2>About Our Pharmacy</h2>
+                <p>
+                    At Our Pharmacy, we prioritize your health and well-being. Our dedicated team of professionals is committed to providing personalized care and high-quality products to meet your healthcare needs. We offer a wide range of services, including prescription medications, over-the-counter products, health consultations, and wellness programs. Our goal is to empower you with the knowledge and resources to make informed decisions about your health.
+                </p>
+                <a href="medical.html" class="cta">Explore Services ></a>
+            </div>
+        </section>
+    </main>
+    
+
+    
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h3>Contact Us</h3>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Pharmacy. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
